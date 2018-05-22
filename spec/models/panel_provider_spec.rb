@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PanelProvider, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to(:target_group) }
+  it { should belong_to(:country) }
+  it { should validate_presence_of(:code) }
 end

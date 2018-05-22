@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get '/locations/:country_code', to: 'locations#index'
+  get '/target_groups/:country_code', to: 'target_groups#index'
 end
