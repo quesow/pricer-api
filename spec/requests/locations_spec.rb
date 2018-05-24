@@ -4,7 +4,7 @@ RSpec.describe 'Locations API', type: :request do
   let!(:location_group_location) { create(:location_group_location) }
   let(:country_code) { location_group_location.location_group.country.country_code }
 
-  describe 'GET /locations/:country_code' do
+  describe 'GET /plocations/:country_code' do
     before { get "/locations/#{country_code}" }
 
     context 'when the records exist' do
