@@ -1,5 +1,6 @@
 module Public
   class TargetGroupsController < ApplicationController
+    skip_before_action :authorize_request, only: :index
     before_action :set_location, only: [:index]
 
     def index
